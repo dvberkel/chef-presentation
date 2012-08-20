@@ -1,8 +1,9 @@
 # package groups
 vcs = %w{git-core}
+util = %w{libshadow-ruby1.8}
 
 # all packages to install
-packages = [ vcs ]
+packages = [ vcs, util ]
 
 packages.flatten.each do |a_package|
   package a_package
