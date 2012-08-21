@@ -1,9 +1,14 @@
+execute "update sources" do
+  command "apt-get update"
+end
+
 # package groups
 vcs = %w{git-core}
 util = %w{libshadow-ruby1.8}
+window_manager = %w{xserver-xorg xinit openbox obmenu lightdm-gtk-greeter}
 
 # all packages to install
-packages = [ vcs, util ]
+packages = [ vcs, util, window_manager ]
 
 packages.flatten.each do |a_package|
   package a_package
