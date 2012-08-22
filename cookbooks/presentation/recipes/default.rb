@@ -6,9 +6,10 @@ end
 vcs = %w{git-core}
 util = %w{libshadow-ruby1.8}
 window_manager = %w{xserver-xorg xinit openbox obmenu lightdm-gtk-greeter}
+window_applications = %w{xterm firefox}
 
 # all packages to install
-packages = [ vcs, util, window_manager ]
+packages = [ vcs, util, window_manager, window_applications ]
 
 packages.flatten.each do |a_package|
   package a_package
