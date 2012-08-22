@@ -3,7 +3,7 @@
 	<menu id="root-menu" label="Openbox 3">
 		<item label="Terminal">
 			<action name="Execute">
-				<execute>xterm</execute>
+				<execute>xterm -fa monaco -fs 15</execute>
 			</action>
 		</item>
 		<item label="Web browser">
