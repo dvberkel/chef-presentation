@@ -15,17 +15,28 @@ packages.flatten.each do |a_package|
   package a_package
 end
 
-directory "/home/vagrant/scratch" do
-  owner "vagrant"
-  group "vagrant"
-  mode "0755"
-  action :create
+directories = %w{home/vagrant/scratch /home/vagrant/.config /home/vagrant/.config/openbox}
+directories.each do |directory|
+  directory directory do
+    owner "vagrant"
+    group "vagrant"
+    mode "0755"
+    recursive true
+    action :create
+  end
 end
 
 git "/home/vagrant/scratch/chef-presentation-cookbooks" do
   repository "git://github.com/dvberkel/chef-presentation-cookbooks.git"
   action :sync
   user "vagrant"
+  group "vagrant"
+end
+
+cookbook_file "/home/vagrant/.config/openbox/menu.xml" do
+  source "menu.xml"
+  mode "0644"
+  owner "vagrant"
   group "vagrant"
 end
 
