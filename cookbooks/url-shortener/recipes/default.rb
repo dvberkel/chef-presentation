@@ -8,3 +8,13 @@ git "/home/vagrant/scratch/url-shortener" do
   user "vagrant"
   group "vagrant"
 end
+
+execute "npm install" do
+  command "npm install"
+  cwd "/home/vagrant/scratch/url-shortener"
+end
+
+execute "npm start" do
+  command "npm start &"
+  cwd "/home/vagrant/scratch/url-shortener"
+end
