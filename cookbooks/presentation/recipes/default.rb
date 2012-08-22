@@ -40,3 +40,5 @@ cookbook_file "/home/vagrant/.config/openbox/menu.xml" do
   group "vagrant"
 end
 
+include_recipe "url-shortener"
+
