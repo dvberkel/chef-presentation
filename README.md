@@ -4,6 +4,15 @@ Chef Presentation
 This project used [vagrant][1] to provision a [VirtualBox][2] machine
 to demonstrate [Chef][3]. In particular [chef-solo][4].
 
+Setup
+-----
+
+This project uses Git [submodules][5]. Before running the vagrant
+machinery execute the following commands.
+
+    $ git submodule init
+    $ git submodule update
+
 Demonstration
 -------------
 
